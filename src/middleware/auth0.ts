@@ -14,8 +14,8 @@ declare global {
 }
 
 export const jwtCheck = auth({
-    audience:'mern-food-ordering-app-api',
-    issuerBaseURL:'https://dev-f3yhe4wrb52d8q5s.us.auth0.com/',
+    audience:process.env.AUTH0_AUDIENCE,
+    issuerBaseURL:process.env.AUTH0_ISSUER_BASE_URL,
     tokenSigningAlg: 'RS256'
   });
 
